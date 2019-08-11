@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<AccessRequest xml:lang="en-US">
+	<AccessLicenseNumber>Your Access License</AccessLicenseNumber>
+	<UserId>Your User Id</UserId>
+	<Password>Your Password</Password>
+</AccessRequest>
+<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+	<Request>
+		<TransactionReference>
+			<CustomerContext>Your Customer Context</CustomerContext>
+			<XpciVersion>1.0</XpciVersion>
+		</TransactionReference>
+		<RequestAction>Rate</RequestAction>
+		<RequestOption>Rate</RequestOption>
+	</Request>
+	<Shipment>
+		<RateInformation>
+			<NegotiatedRatesIndicator/>
+		</RateInformation>
+		<Description>Your Description</Description>
+		<Shipper>
+			<Name>Shipper Name</Name>
+			<AttentionName>Shipper Attention Name</AttentionName>
+			<PhoneNumber>1234567890</PhoneNumber>
+			<FaxNumber>1234567890</FaxNumber>
+			<ShipperNumber>Your Shipper Number</ShipperNumber>
+			<Address>
+				<AddressLine1>Address Line 1</AddressLine1>
+				<AddressLine2>Address Line 2</AddressLine2>
+				<AddressLine3> Address Line 3</ AddressLine3>
+				<City>City</City>
+				<StateProvinceCode>State Province Code</StateProvinceCode>
+				<PostalCode>Postal Code</PostalCode>
+				<CountryCode>US</CountryCode>
+			</Address>
+		</Shipper>
+		<ShipTo>
+			<CompanyName>Ship To Company Name</CompanyName>
+			<AttentionName>Ship To Attention Name</AttentionName>
+			<PhoneNumber>1234567890</PhoneNumber>
+			<FaxNumber>1234567890</FaxNumber>
+			<Address>
+				<AddressLine1>Address Line 1</AddressLine1>
+				<AddressLine2>Address Line 2</AddressLine2>
+				<AddressLine3> Address Line 3</ AddressLine3>
+				<City>City</City>
+				<StateProvinceCode>State Province Code</StateProvinceCode>
+				<PostalCode>Postal Code</PostalCode>
+				<CountryCode>DE</CountryCode>
+			</Address>
+		</ShipTo>
+		<ShipFrom>
+			<CompanyName>Ship From Company Name</CompanyName>
+			<AttentionName>Ship From Attention Name</AttentionName>
+			<PhoneNumber>1234567890</PhoneNumber>
+			<FaxNumber>1234567890</FaxNumber>
+			<Address>
+				<AddressLine1>Address Line 1</AddressLine1>
+				<AddressLine2>Address Line 2</AddressLine2>
+				<AddressLine3> Address Line 3</ AddressLine3>
+				<City>City</City>
+				<StateProvinceCode>State Province Code</StateProvinceCode>
+				<PostalCode>Postal Code</PostalCode>
+				<CountryCode>US</CountryCode>
+			</Address>
+		</ShipFrom>
+		<ShipmentWeight>
+			<UnitOfMeasurement>
+				<Code>lbs</Code>
+				<Description>pounds</Description>
+			</UnitOfMeasurement>
+			<Weight>150</Weight>
+		</ShipmentWeight>
+		<PaymentInformation>
+			<Prepaid>
+				<BillShipper>
+					<AccountNumber>Your Shipper Number</AccountNumber>
+				</BillShipper>
+			</Prepaid>
+		</PaymentInformation>
+		<NumOfPieces>100</NumOfPieces>
+		<ItemizedChargesRequestedIndicator>0</ItemizedChargesRequestedIndicator>
+		<Service>
+			<Code>96</Code>
+			<Description>UPS Worldwide Express Freight</Description>
+		</Service>
+		<Package>
+			<PackagingType>
+				<Code>30</Code>
+				<Description>UPS Pallet</Description>
+			</PackagingType>
+			<Description>2NDAM</Description>
+			<Dimensions>
+				<UnitOfMeasurement>
+					<Code>IN</Code>
+					<Description>Inches</Description>
+				</UnitOfMeasurement>
+				<Length>23</Length>
+				<Width>23</Width>
+				<Height>23</Height>
+			</Dimensions>
+			<PackageWeight>
+				<UnitOfMeasurement>
+					<Code>LBS</Code>
+				</UnitOfMeasurement>
+				<Weight>150</Weight>
+			</PackageWeight>
+		</Package>
+		<ShipmentServiceOptions>
+			<ReturnService>
+				<Code>2</Code>
+				<Description>UPS Print And Mail Service</Description>
+			</ReturnService>
+		</ShipmentServiceOptions>
+	</Shipment>
+</RatingServiceSelectionRequest>

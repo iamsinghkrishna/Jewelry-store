@@ -1,0 +1,49 @@
+/* =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+
+     [Master Stylesheet]
+     ---------------------------
+
+          Project: Jewelry | Coming Soon Template HTML5
+          Version: 1.0
+          Author: Qawba
+
+    [Table of contents]
+    ---------------------------
+
+          01.  Generals Settings
+               1.1. Headings
+               1.2. Typography
+          02.  Bootstrap Settings
+               2.1. Form
+               2.2. BTN
+               2.3. Label
+               2.4. Alert
+               2.5. Progress-bar
+               2.6. Panel
+               2.7. Tabs
+               2.8. Pills
+          03.  PRELOAD the Whole Page
+               3.1. Preloader Effect / #preloader
+               3.2 Preloading Animation / #loading-animation
+          04.  HEADER / #header
+               4.1. Social / #social
+               4.2. Logo / #logo
+               4.3. Intro / #intro
+               4.4. Countdown / #countdown
+               4.5. Section 404 / #section-404
+               4.6. Copyright Header / #copyright-header
+          05.  COPYRIGHT SECTION / #copyright
+          06.  ABOUT SECTION / #about
+          07.  COMPONENTS SECTION /  #components
+          08.  MODAL More /  .modal
+          09. MEDIA Queries Settings
+
+=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* */
+/* ==============================
+:::::::::: 04. HEADER :::::::::::
+================================= */
+/* 4.4. Countdown */
+#countdown {background: rgba(0, 0, 0, 0.4);}
+.dash-glob {border-left: 1px solid rgba(250, 250, 250, 0.05);}
+.dash_title,
+.digit {color: rgba(250, 250, 250, 0.9);}

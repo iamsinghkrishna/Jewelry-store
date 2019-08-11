@@ -1,0 +1,101 @@
+<section class="instagram_feeds">
+    <div class="header_title">
+        <img class="insta_img" src="<?php echo base_url() ?>assets/images/Insta.png"> 
+        <h2><span class="headline"></span>Shop Our Instagram <span class="headline"></span></h2>
+    </div>
+
+    <div class="insta_images_">
+
+
+        <?php
+        $i=0;
+        $product_insta_images = array();
+        if (!empty($product_details_instagram)) {
+            foreach ($product_details_instagram as $key => $images) {
+                if ($key <= 7) {
+                    $product_insta_images[]='https://' . $images['instagram_image'];
+                    ?>
+                    <div class="col-md-3 col-xs-6" style="padding: 15px;">
+                        <img src="<?php echo 'https://' . $images['instagram_image']; ?>">
+                        <a style="cursor:pointer;" onclick="addToCartInstagram('<?php echo 'https://' . $images['instagram_image']; ?>')" target="_blank"><div class="details">Shop Now</div></a>
+                    </div>
+                    <?php
+                    $i++;
+                }
+            }
+        }
+        ?>
+
+        <?php
+        //echo '<pre>';print_R($insta_feeds);die;
+            if($i < 8){
+                    if (!empty($insta_feeds)) {
+                    foreach ($insta_feeds as $keys => $images) {
+                        if ($i <= 7) {
+                            if (in_array($images, $product_insta_images)){
+
+                            }else{
+                            ?>
+                                <div class="col-md-3 col-xs-6" style="padding: 15px;">
+                                    <img src="<?php echo $images; ?>">
+
+                                </div>
+                                <?php
+                                $i++;
+                            }
+                        }
+                    }
+                }
+          }
+        ?>
+
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+
+
+---------------------------
+
+<section class="instagram_feeds">
+    <div class="container">
+    <div class="header_title">
+        <img class="insta_img" src="<?php echo base_url() ?>assets/images/Insta.png"> 
+        <h2><span class="headline"></span>Shop Our Instagram <span class="headline"></span></h2>
+    </div>
+
+    <div class="insta_images_">
+
+
+
+
+
+    <ul  class="product-list-grid desktop-columns-4 tablet-columns-3 mobile-columns-1 row flex-flow">
+        <?php
+        
+        $product_details_instagram = $this->data['insta_feeds'];
+        $i = 0;
+        $product_insta_images = array();
+        foreach ($product_details_instagram as $key => $image) {
+            
+        if ($key > 7) {
+            break;
+        }
+    ?>
+            <li class="product-item col-sm-3">
+                <div class="product-inner">
+                    <div class="product-thumb has-back-image">
+                        <img src="<?php echo $image; ?>" alt="" >
+                    </div>
+                </div>
+            </li>
+        <?php }?>
+    </ul>
+
+
+
+
+    </div>
+    <div class="clearfix"></div>
+    </div>
+</section>

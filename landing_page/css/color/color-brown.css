@@ -1,0 +1,363 @@
+/* =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+
+     [Master Stylesheet]
+     ---------------------------
+
+          Project: Jewelry | Coming Soon Template HTML5
+          Version: 1.0
+          Author: Qawba
+
+    [Table of contents]
+    ---------------------------
+
+          01.  Generals Settings
+               1.1. Headings
+               1.2. Typography
+          02.  Bootstrap Settings
+               2.1. Form
+               2.2. BTN
+               2.3. Label
+               2.4. Alert
+               2.5. Progress-bar
+               2.6. Panel
+               2.7. Tabs
+               2.8. Pills
+          03.  PRELOAD the Whole Page
+               3.1. Preloader Effect / #preloader
+               3.2 Preloading Animation / #loading-animation
+          04.  HEADER / #header
+               4.1. Social / #social
+               4.2. Logo / #logo
+               4.3. Intro / #intro
+               4.4. Countdown / #countdown
+               4.5. Section 404 / #section-404
+               4.6. Copyright Header / #copyright-header
+          05.  COPYRIGHT SECTION / #copyright
+          06.  ABOUT SECTION / #about
+          07.  COMPONENTS SECTION /  #components
+          08.  MODAL More /  .modal
+          09. MEDIA Queries Settings
+
+    [Color codes (css/color/)]
+     ---------------------------
+
+     Body      : Background: #ffffff (white)
+     Header    : Background: rgba(0, 0, 0, 0.8) (Dark)
+
+          Brown     : color-brown.css
+               a (standard):  #7a5230 (Brown)
+               a (visited):   #926239 (light Brown)
+               a (active):    #926239 (light Brown)
+
+=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* */
+/* =========================================
+:::::::::: 01. Generals Settings :::::::::::
+============================================ */
+ body, html {
+    color: #333;
+}
+/* 1.1. Headings */
+ h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+h4 i {
+    color: #7a5230;
+}
+/* 1.2. Typography */
+ a {
+    color: #333;
+}
+a:hover, a:focus {
+    color: #926239;
+}
+p {
+    color: #333;
+}
+p a {
+    border-bottom: 1px dotted #46484a;
+}
+p a:hover {
+    border-bottom: 1px dotted #181b1e;
+}
+span {
+    color: #7a5230;
+}
+.hr {
+    background-color: #fafafa;
+}
+hr {
+    border-color: #eee -moz-use-text-color -moz-use-text-color;
+}
+/* ==========================================
+:::::::::: 03. Bootstrap Settings :::::::::::
+============================================= */
+
+/* 2.1. Form */
+ .form-control {
+    border: 1px solid #ccc;
+    color: #555;
+    background-color:#fff;
+}
+.form-control::-webkit-input-placeholder {
+    color: #a6a6a6;
+}
+.form-control:-moz-placeholder {
+    color: #a6a6a6;
+}
+.form-control::-moz-placeholder {
+    color: #a6a6a6;
+}
+.form-control:-ms-input-placeholder {
+    color: #a6a6a6;
+}
+.form-control:focus {
+    border-color: #e2e2e2;
+}
+.input-group-addon {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    color: #777;
+}
+/* 2.2. BTN */
+ .btn-qawba, .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-link {
+    font-weight: 400;
+}
+.btn-qawba {
+    background-color: #7a5230;
+    color: #fff;
+}
+.btn-qawba.active, .btn-qawba:active, .btn-qawba:focus, .btn-qawba:hover {
+    background-color: #444;
+    color: #fff
+}
+a.btn-dark, .btn-dark {
+    border: 1px solid #444;
+    color: #555;
+}
+a.btn-light, .btn-light {
+    border: 1px solid #fff;
+    color: #555;
+}
+a.btn-light i, .btn-light i {
+    color: #fff;
+}
+a.btn-color, .btn-color {
+    border: 1px solid #7a5230;
+    color: #7a5230;
+}
+a.btn-light:hover, .btn-light:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #222;
+}
+a.btn-light:hover i, .btn-light:hover i {
+    color: #222;
+}
+a.btn-dark:hover, .btn-dark:hover {
+    background-color: #46484a;
+    border: 1px solid #46484a;
+    color: #fff;
+}
+a.btn-color:hover, .btn-color:hover {
+    background-color: #7a5230;
+    border: 1px solid #7a5230;
+    color: #fff;
+}
+a.btn-dark .text, .btn-dark .text {
+    color: #777;
+}
+a.btn-color .text, .btn-color .text {
+    color: #7a5230
+}
+a.btn-light .text, .btn-light .text {
+    color: #fff;
+}
+a.btn-dark:hover .text, .btn-dark:hover .text, a.btn-color:hover .text, .btn-color:hover .text {
+    color: #fff;
+}
+a.btn-light:hover .text, .btn-light:hover .text {
+    color: #222;
+}
+/* 2.3. Label */
+ .label {
+    color: #fff;
+}
+.label-qawba {
+    background-color: #7a5230;
+}
+.label-qawba:hover {
+    background-color: #444;
+    color: #fff
+}
+/* 2.5. Progress-bar */
+ .progress {
+    background-color: #fff;
+}
+.progress-bar {
+    background-color: #7a5230;
+}
+/* 2.6. Panel */
+ .panel {
+    background-color: #fff;
+}
+.panel-default {
+    border-color: #eee;
+}
+.panel-default > .panel-heading {
+    background-color: #fafafa;
+    border-color: #eee;
+    color: #444;
+}
+/* 2.7. Tabs */
+ .nav > li > a:hover {
+    color: #fff
+}
+/* 2.8. Pills */
+ .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #7a5230;
+    color: #fff
+}
+/* ==============================================
+:::::::::: 03. PRELOAD the Whole Page :::::::::::
+================================================= */
+
+/* 3.2. Preloader Effect */
+ #preloader {
+    background:#111;
+}
+/* ==============================
+:::::::::: 04. HEADER :::::::::::
+================================= */
+ #header {
+    background: rgba(0, 0, 0, 0.8);
+}
+/* 4.1. Social */
+ #social, a.btn-social, #social .list .fa {
+    color: #fff;
+    background-color: #7a5230;
+}
+a.btn-social:hover {
+    color: #7a5230;
+    background-color: #fff;
+}
+#social .list .fa-twitter:hover {
+    background-color:#00aced;
+}
+#social .list .fa-facebook:hover {
+    background-color:#3b5998;
+}
+#social .list .fa-dribbble:hover {
+    background-color:#ea4c89;
+}
+#social .list .fa-google-plus:hover {
+    background-color:#dd4b39;
+}
+#social .list .fa-linkedin:hover {
+    background-color:#007bb6;
+}
+#social .list .fa-instagram:hover {
+    background-color:#517fa4;
+}
+#social .list .fa-pinterest:hover {
+    background-color:#cb2027;
+}
+#social .list .fa-flickr:hover {
+    background-color:#ff0084;
+}
+/* 4.2. logo */
+ .logo h3 {
+    color: #fff;
+}
+/* 4.3. Intro */
+ #intro h1, #intro a .text, #intro a i {
+    color: #fff;
+}
+#intro a:hover .text, #intro a:hover i {
+    color: #926239;
+}
+/* 4.4. Countdown */
+ .countdown-section {
+    background-color: rgba(250, 250, 250, 0.8);
+}
+.dash-glob {
+    border-left: 1px solid #ccc;
+}
+.dash_title, .digit {
+    color: #333;
+}
+/* 4.5. Section 404 */
+ .section-404 p.text-hero, .section-404 h1 {
+    color: #fff;
+}
+.section-404 p {
+    color: #eee;
+}
+/* 4.6. Copyright */
+ #copyright-header p .logo {
+    color: #999;
+}
+#copyright-header p {
+    color: #666;
+}
+#copyright-header p a {
+    color: #777;
+}
+#copyright-header p .logo:hover,
+#copyright-header p a:hover {
+    color: #926239;
+}
+#copyright-header li a i {
+    background-color: #fff;
+    color: #111;
+}
+#copyright-header li a i:hover {
+    background-color: #46484a;
+    color: #fff;
+}
+/* =========================================
+:::::::::: 05. COPYRIGHT SECTION :::::::::::
+============================================ */
+#copyright {
+    background-color: #24282a;
+}
+#copyright p{
+    color:#999;
+}
+#copyright p .logo {
+    color: #999;
+}
+#copyright p .logo:hover {
+    color: #926239;
+}
+#copyright p a,
+#copyright li a {
+    color:#ccc;
+}
+#copyright p a:hover, 
+#copyright p a:focus, 
+#copyright p a:active,
+#copyright li a:hover, 
+#copyright li a:focus, 
+#copyright li a:active {
+    color: #926239;
+}
+/* =====================================
+:::::::::: 06. ABOUT SECTION :::::::::::
+======================================== */
+
+/* ==========================================
+:::::::::: 07. COMPONENTS SECTION :::::::::::
+============================================= */
+
+/* ==================================
+:::::::::: 08. MODAL More :::::::::::
+===================================== */
+ .modal .modal-backdrop {
+    background-color: #000;
+}
+.modal .modal-close::before, .modal .modal-close::after {
+    background-color:#aaa;
+}
+.modal .modal-close:focus::after, .modal .modal-close:focus::before, .modal .modal-close:hover::after, .modal .modal-close:hover::before {
+    background-color:#7a5230;
+}

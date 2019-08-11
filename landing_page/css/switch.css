@@ -1,0 +1,259 @@
+/* =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+
+    #Jewelry | Coming Soon Template HTML5 BY QAWBA.COM
+    @Author        QAWBA
+    @Type          CSS
+
+    TABLE OF CONTENTS
+    ---------------------------
+
+        01.  Switch Settings
+
+=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* */
+/* =======================================
+:::::::::: 01. Switch Settings :::::::::::
+========================================== */
+a.btn-Switch {
+    background-color: #eee;
+    border-color: #eee;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    top: 5px;
+    left: 5px;
+    color: #222;
+    position: fixed;
+    margin: 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 0;
+    font-family:"Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600 !important;
+    transition: all 0.4s ease-in-out 0s;
+    z-index: 20;
+}
+a.btn-Switch:hover, 
+a.btn-Switch:focus, 
+a.btn-Switch.focus, 
+a.btn-Switch:active, 
+a.btn-Switch.active, 
+.open > .dropdown-toggle.btn-Switch {
+    background-color: #444;
+    border-color: #444;
+    color: #fff;
+}
+#Switch {
+    margin:0px 5px 5px 5px;
+    padding: 25px;
+    position: fixed;
+    width: 230px;
+    z-index: 5;
+    top: 45px;
+    float: left;
+    background: #eee;
+    display:none;
+}
+#Switch h3, #Switch h4 {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#Switch h3 {
+    width: 100%;
+    padding:0 0 10px 0;
+    margin: 0;
+    font-size: 18px
+}
+#Switch h4 {
+    width: 100%;
+    padding:6px 0 5px 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600
+}
+#Switch hr {
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+}
+#cssSwitch, 
+#cssfooter, 
+#csscountdown {
+    margin: 0px;
+    padding:0px 0px;
+    float: left;
+    width: 100%
+}
+#cssSwitch {
+    margin:0 0 10px 0;
+}
+#cssfooter {
+    margin:0 0 0px 0;
+}
+#csscountdown {
+    margin:0 0 10px 0;
+}
+ul#cssfooter li {
+    float:left;
+    padding:4px;
+    width:50%;
+    list-style: none
+}
+ul#cssfooter a.btn-dark, 
+ul#cssfooter a.btn-light {
+    width: 100%;
+    line-height: 28px;
+    height: 30px;
+    font-weight: normal!important;
+    padding: 0;
+    margin: 0;
+}
+ul#cssfooter a.btn-dark {
+    background: #444;
+    color: #fff;
+    border: 1px solid #ccc;
+}
+ul#cssfooter a.btn-light {
+    background: #fff;
+    color: #444;
+    border: 1px solid #ccc;
+}
+ul#cssfooter a:hover .btn-light, 
+ul#cssfooter a.btn-light:hover {
+    background: #444;
+    color: #fff!important;
+    border: 1px solid #ccc;
+}
+ul#cssfooter a:hover .btn-dark, 
+ul#cssfooter a.btn-dark:hover {
+    background: #fff;
+    color: #444;
+    border: 1px solid #ccc;
+}
+ul#csscountdown li, 
+ul#cssSwitch li {
+    float:left;
+    margin:3px 3px;
+    width:30px;
+    height:30px;
+    list-style: none
+}
+ul#csscountdown li a, 
+ul#cssSwitch li a {
+    cursor:pointer;
+    display:block;
+    position: relative;
+    width:30px;
+    height:30px;
+    border-radius: 30px
+}
+
+ul#csscountdown li a.cssblue, 
+ul#cssSwitch li a.cssblue {
+    background-color:#008ed6;
+}
+ul#csscountdown li a.cssblue:hover, 
+ul#cssSwitch li a.cssblue:hover {
+    background-color:#008ed6;
+}
+
+ul#csscountdown li a.cssred, 
+ul#cssSwitch li a.cssred {
+    background-color:#f25454;
+}
+ul#csscountdown li a.cssred:hover, 
+ul#cssSwitch li a.cssred:hover {
+    background-color:#f25454;
+}
+
+ul#csscountdown li a.cssgreen, 
+ul#cssSwitch li a.cssgreen {
+    background-color:#00ab66;
+}
+ul#csscountdown li a.cssgreen:hover, 
+ul#cssSwitch li a.cssgreen:hover {
+    background-color:#00ab66;
+}
+
+ul#csscountdown li a.cssorange, 
+ul#cssSwitch li a.cssorange {
+    background-color:#ea8825;
+}
+ul#csscountdown li a.cssorange:hover, 
+ul#cssSwitch li a.cssorange:hover {
+    background-color:#ea8825;
+}
+
+ul#csscountdown li a.csspurple, 
+ul#cssSwitch li a.csspurple {
+    background-color:#8600c8;
+}
+ul#csscountdown li a.csspurple:hover, 
+ul#cssSwitch li a.csspurple:hover {
+    background-color:#8600c8;
+}
+
+ul#csscountdown li a.csspink, 
+ul#cssSwitch li a.csspink {
+    background-color:#c86384;
+}
+ul#csscountdown li a.csspink:hover, 
+ul#cssSwitch li a.csspink:hover {
+    background-color:#c86384;
+}
+
+ul#csscountdown li a.cssdark-cyan, 
+ul#cssSwitch li a.cssdark-cyan {
+    background-color:#008686;
+}
+ul#csscountdown li a.cssdark-cyan:hover, 
+ul#cssSwitch li a.cssdark-cyan:hover {
+    background-color:#008686;
+}
+
+ul#csscountdown li a.cssdark-gray, 
+ul#cssSwitch li a.cssdark-gray {
+    background-color:#4e5b5e;
+}
+ul#csscountdown li a.cssdark-gray:hover, 
+ul#cssSwitch li a.cssdark-gray:hover {
+    background-color:#4e5b5e;
+}
+
+ul#csscountdown li a.cssbrown, 
+ul#cssSwitch li a.cssbrown {
+    background-color:#7a5230;
+}
+ul#csscountdown li a.cssbrown:hover, 
+ul#cssSwitch li a.cssbrown:hover {
+    background-color:#7a5230;
+}
+
+ul#csscountdown li a.cssyellow, 
+ul#cssSwitch li a.cssyellow {
+    background-color:#b59a17;
+}
+ul#cssSwitch li a.cssyellow:hover, 
+ul#cssSwitch li a.cssyellow:hover {
+    background-color:#b59a17;
+}
+
+ul#csscountdown li a.csslight, 
+ul#cssSwitch li a.csslight {
+    background-color:#fff;
+}
+ul#csscountdown li a.csslight:hover, 
+ul#cssSwitch li a.csslight:hover {
+    background-color:#fff;
+}
+
+ul#csscountdown li a.cssdark, 
+ul#cssSwitch li a.cssdark {
+    background-color:#111;
+}
+ul#csscountdown li a.cssdark:hover, 
+ul#cssSwitch li a.cssdark:hover {
+    background-color:#111;
+}

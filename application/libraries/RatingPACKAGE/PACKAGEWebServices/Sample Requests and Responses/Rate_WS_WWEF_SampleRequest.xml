@@ -1,0 +1,87 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:upss="http://www.ups.com/XMLSchema/XOLTWS/UPSS/v1.0" xmlns:wsf="http://www.ups.com/schema/wsf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">
+	<env:Header>
+		<wsse:Security>
+			<wsse:UsernameToken>
+				<wsse:Username>Your User Id</wsse:Username>
+				<wsse:Password>Your Password</wsse:Password>
+			</wsse:UsernameToken>
+			<upssa:UPSServiceAccessToken>
+				<upssa:AccessLicenseNumber>Your Access License Key</upssa:AccessLicenseNumber>
+			</upssa:UPSServiceAccessToken>
+		</wsse:Security>
+	</env:Header>
+	<env:Body>
+		<rate:RateRequest xmlns:rate="http://www.ups.com/XMLSchema/XOLTWS/Rate/v1.1" xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<common:Request>
+				<common:RequestOption>Rate</common:RequestOption>
+				<common:TransactionReference>
+					<common:CustomerContext>Your Customer Context</common:CustomerContext>
+				</common:TransactionReference>
+			</common:Request>
+			<rate:Shipment>
+				<rate:Shipper>
+					<rate:Name>Shipper Name</rate:Name>
+					<rate:ShipperNumber>Shipper Number</rate:ShipperNumber>
+					<rate:Address>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:City>City</rate:City>
+						<rate:StateProvinceCode>State Province Code</rate:StateProvinceCode>
+						<rate:PostalCode>Postal Code</rate:PostalCode>
+						<rate:CountryCode>US</rate:CountryCode>
+					</rate:Address>
+				</rate:Shipper>
+				<rate:ShipTo>
+					<rate:Name>Ship To Name</rate:Name>
+					<rate:Address>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:City>City</rate:City>
+						<rate:StateProvinceCode>State Province Code</rate:StateProvinceCode>
+						<rate:PostalCode>Postal Code</rate:PostalCode>
+						<rate:CountryCode>DE</rate:CountryCode>
+					</rate:Address>
+				</rate:ShipTo>
+				<rate:ShipFrom>
+					<rate:Name>Ship From Name</rate:Name>
+					<rate:Address>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:AddressLine>Address Line </rate:AddressLine>
+						<rate:City>City</rate:City>
+						<rate:StateProvinceCode>State Province Code</rate:StateProvinceCode>
+						<rate:PostalCode>Postal Code</rate:PostalCode>
+						<rate:CountryCode>US</rate:CountryCode>
+					</rate:Address>
+				</rate:ShipFrom>
+				<rate:Service>
+					<rate:Code>96</rate:Code>
+					<rate:Description>UPS Worldwide Express Freight</rate:Description>
+				</rate:Service>
+				<rate:NumOfPieces>1</rate:NumOfPieces>
+				<rate:ItemizedChargesRequestedIndicator>0</rate:ItemizedChargesRequestedIndicator>
+				<rate:Package>
+					<rate:PackagingType>
+						<rate:Code>30</rate:Code>
+					</rate:PackagingType>
+					<rate:Dimensions>
+						<rate:UnitOfMeasurement>
+							<rate:Code>IN</rate:Code>
+						</rate:UnitOfMeasurement>
+						<rate:Length>12</rate:Length>
+						<rate:Width>12</rate:Width>
+						<rate:Height>12</rate:Height>
+					</rate:Dimensions>
+					<rate:PackageWeight>
+						<rate:UnitOfMeasurement>
+							<rate:Code>LBS</rate:Code>
+						</rate:UnitOfMeasurement>
+						<rate:Weight>100</rate:Weight>
+					</rate:PackageWeight>
+				</rate:Package>
+			</rate:Shipment>
+		</rate:RateRequest>
+	</env:Body>
+</env:Envelope>

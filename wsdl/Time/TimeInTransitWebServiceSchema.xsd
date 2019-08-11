@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0" xmlns:tnt="http://www.ups.com/XMLSchema/XOLTWS/tnt/v1.0" elementFormDefault="qualified" targetNamespace="http://www.ups.com/XMLSchema/XOLTWS/tnt/v1.0">
+	<xs:import namespace="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0" schemaLocation="common.xsd"/>
+	<xs:complexType name="ResponseShipListAddressType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Town" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element minOccurs="0" name="StateProvinceCode" type="xs:string"/>
+			<xs:element name="CountryCode" type="xs:string"/>
+			<xs:element minOccurs="0" name="PostcodePrimaryLow" type="xs:string"/>
+			<xs:element minOccurs="0" name="PostcodePrimaryHigh" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RequestShipFromAddressType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Town" type="xs:string"/>
+			<xs:element minOccurs="0" name="City" type="xs:string"/>
+			<xs:element minOccurs="0" name="StateProvinceCode" type="xs:string"/>
+			<xs:element name="CountryCode" type="xs:string"/>
+			<xs:element minOccurs="0" name="PostalCode" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RequestShipToAddressType">
+		<xs:complexContent>
+			<xs:extension base="tnt:RequestShipFromAddressType">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ResidentialAddressIndicator" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ResponseShipFromAddressType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Town" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element minOccurs="0" name="StateProvinceCode" type="xs:string"/>
+			<xs:element name="CountryCode" type="xs:string"/>
+			<xs:element name="Country" type="xs:string"/>
+			<xs:element minOccurs="0" name="PostalCode" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResponseShipToAddressType">
+		<xs:complexContent>
+			<xs:extension base="tnt:ResponseShipFromAddressType">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ResidentialAddressIndicator" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RequestShipFromType">
+		<xs:sequence>
+			<xs:element name="Address" type="tnt:RequestShipFromAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RequestShipToType">
+		<xs:sequence>
+			<xs:element name="Address" type="tnt:RequestShipToAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResponseShipFromType">
+		<xs:sequence>
+			<xs:element name="Address" type="tnt:ResponseShipFromAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResponseShipToType">
+		<xs:sequence>
+			<xs:element name="Address" type="tnt:ResponseShipToAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShipmentWeightType">
+		<xs:sequence>
+			<xs:element name="UnitOfMeasurement" type="tnt:CodeDescriptionType"/>
+			<xs:element name="Weight" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CodeDescriptionType">
+		<xs:sequence>
+			<xs:element name="Code" type="xs:string"/>
+			<xs:element minOccurs="0" name="Description" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PickupType">
+		<xs:sequence>
+			<xs:element name="Date" type="xs:string"/>
+			<xs:element minOccurs="0" name="Time" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InvoiceLineTotalType">
+		<xs:sequence>
+			<xs:element name="CurrencyCode" type="xs:string"/>
+			<xs:element name="MonetaryValue" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TimeInTransitRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="common:Request"/>
+				<xs:element name="ShipFrom" type="tnt:RequestShipFromType"/>
+				<xs:element name="ShipTo" type="tnt:RequestShipToType"/>
+				<xs:element name="Pickup" type="tnt:PickupType"/>
+				<xs:element minOccurs="0" name="ShipmentWeight" type="tnt:ShipmentWeightType"/>
+				<xs:element minOccurs="0" name="TotalPackagesInShipment" type="xs:string"/>
+				<xs:element minOccurs="0" name="InvoiceLineTotal" type="tnt:InvoiceLineTotalType"/>
+				<xs:element minOccurs="0" name="DocumentsOnlyIndicator" type="xs:string"/>
+				<xs:element minOccurs="0" name="BillType" type="xs:string"/>
+				<xs:element minOccurs="0" name="MaximumListSize" type="xs:string"/>
+				<xs:element minOccurs="0" name="SaturdayDeliveryInfoRequestIndicator" type="xs:string"/>
+				<xs:element minOccurs="0" name="DropOffAtFacilityIndicator" type="xs:string"/>
+				<xs:element minOccurs="0" name="HoldForPickupIndicator" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="EstimatedArrivalType">
+		<xs:sequence>
+			<xs:element name="Arrival" type="tnt:PickupType"/>
+			<xs:element name="BusinessDaysInTransit" type="xs:string"/>
+			<xs:element name="Pickup" type="tnt:PickupType"/>
+			<xs:element minOccurs="0" name="DayOfWeek" type="xs:string"/>
+			<xs:element minOccurs="0" name="CustomerCenterCutoff" type="xs:string"/>
+			<xs:element minOccurs="0" name="DelayCount" type="xs:string"/>
+			<xs:element minOccurs="0" name="HolidayCount" type="xs:string"/>
+			<xs:element minOccurs="0" name="RestDays" type="xs:string"/>
+			<xs:element minOccurs="0" name="TotalTransitDays" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ServiceSummaryType">
+		<xs:sequence>
+			<xs:element name="Service" type="tnt:CodeDescriptionType"/>
+			<xs:element minOccurs="0" name="GuaranteedIndicator" type="xs:string"/>
+			<xs:element minOccurs="0" name="Disclaimer" type="xs:string"/>
+			<xs:element name="EstimatedArrival" type="tnt:EstimatedArrivalType"/>
+			<xs:element minOccurs="0" name="SaturdayDelivery" type="xs:string"/>
+			<xs:element minOccurs="0" name="SaturdayDeliveryDisclaimer" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TransitResponseType">
+		<xs:sequence>
+			<xs:element name="ShipFrom" type="tnt:ResponseShipFromType"/>
+			<xs:element name="ShipTo" type="tnt:ResponseShipToType"/>
+			<xs:element name="PickupDate" type="xs:string"/>
+			<xs:element minOccurs="0" name="ShipmentWeight" type="tnt:ShipmentWeightType"/>
+			<xs:element minOccurs="0" name="InvoiceLineTotal" type="tnt:InvoiceLineTotalType"/>
+			<xs:element minOccurs="0" name="DocumentsOnlyIndicator" type="xs:string"/>
+			<xs:element minOccurs="0" name="BillType" type="xs:string"/>
+			<xs:element minOccurs="0" name="MaximumListSize" type="xs:string"/>
+			<xs:element maxOccurs="unbounded" name="ServiceSummary" type="tnt:ServiceSummaryType"/>
+			<xs:element minOccurs="0" name="AutoDutyCode" type="xs:string"/>
+			<xs:element minOccurs="0" name="Disclaimer" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CandidateType">
+		<xs:sequence>
+			<xs:element name="Address" type="tnt:ResponseShipListAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShipListType">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="Candidate" type="tnt:CandidateType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CandidateResponseType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="ShipFromList" type="tnt:ShipListType"/>
+			<xs:element minOccurs="0" name="ShipToList" type="tnt:ShipListType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TimeInTransitResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="common:Response"/>
+				<xs:choice>
+					<xs:element minOccurs="0" name="TransitResponse" type="tnt:TransitResponseType"/>
+					<xs:element minOccurs="0" name="CandidateResponse" type="tnt:CandidateResponseType"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

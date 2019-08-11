@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="en-US"> <!--<![endif]-->
+
+<!-- Mirrored from demo.qawba.com/jewelry/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Dec 2017 08:09:02 GMT -->
+<head>
+    <meta charset="utf-8">
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="qawba">
+    <meta name="Description" content="Jewelry - Coming Soon Template HTML5" />
+    <title>404 - Jewelry - Coming Soon Template HTML5</title>
+    <link href="img/favicon.png" type="image/png" rel="icon">
+
+    <!-- ============ Google fonts ============ -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- ============ Add custom CSS here ============ -->
+    <link href="css/bootstrap.min.css"      rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css"   rel="stylesheet" type="text/css">
+    <link href="css/style.css"              rel="stylesheet" type="text/css">
+    
+    <!-- ============ switch CSS here ============ -->
+    <link href="css/switch.css"             rel="stylesheet" type="text/css">
+    <link href="css/color/color-red.css"            rel="stylesheet" type="text/css" class="switchable1">
+
+</head>
+<body>
+    
+    <!-- *** START HEADER *** -->
+    <header id="header">
+
+         <div class="container"> 
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                
+                    <!-- LOGO -->
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="logo"><h3>Jewelry</h3></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- START SECTION 404 -->
+        <section class="section-404">
+            <div class="col-md-6 col-md-offset-3">
+
+                <p class="text-hero">404</p>
+                <h1>Page is not found</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper interdum dignissim. Ut efficitur vel nulla id venenatis. Cras convallis sed massa.</p>
+
+                <a class="btn btn-light" href="index.html"><span class="text">to Homepage</span></a>
+            
+            </div>
+        </section>
+        <!-- END SECTION 404 -->
+
+    </header>
+    <!-- *** END HEADER *** -->
+
+    <!-- *** START SWITCH SECTION *** -->
+
+    <section>
+
+        <a href="#" class="btn-Switch">
+          <i class="fa fa-cog"></i>
+        </a>
+    
+        <div id="Switch">
+
+            <h3>Style Switcher:</h3>
+            <h4>Predifined Colors:</h4>
+
+            <ul id="cssSwitch">
+
+                <li><a href="#" class="cssblue" title="Thème Bleu"></a></li>
+                <li><a href="#" class="cssred" title="Thème Red"></a></li>
+                <li><a href="#" class="cssgreen" title="Thème Green"></a></li>
+                <li><a href="#" class="cssorange" title="Thème Orange"></a></li>
+                <li><a href="#" class="csspurple" title="Thème Purple"></a></li>
+                <li><a href="#" class="csspink" title="Thème Pink"></a></li>
+                <li><a href="#" class="cssdark-cyan" title="Thème Dark Cyan"></a></li>
+                <li><a href="#" class="cssdark-gray" title="Thème Dark Gray"></a></li>
+                <li><a href="#" class="cssbrown" title="Thème Brown"></a></li>
+                <li><a href="#" class="cssyellow" title="Thème Yellow"></a></li>
+            
+            </ul>
+
+        </div>
+
+    </section>
+    <!-- *** END SWITCH SECTION *** -->
+
+    <!-- ////////////////\\\\\\\\\\\\\\\\ -->
+    <!-- ********** Javascript ********** -->
+    <!-- \\\\\\\\\\\\\\\\//////////////// -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <!-- *** Dynamically-resized, slideshow-capable background image to any page or element *** -->
+    <script type="text/javascript" src="js/jquery.backstretch.js"></script>
+
+    <script>
+    'use strict';
+    /* =================================== */
+    /* ::::::: CSS Switch - jQuery ::::::: */
+    /* =================================== */
+    $(window).load(function() {
+        
+        $("#Switch:even").addClass("alt");
+        $('.btn-Switch').click(function () {
+            $('#Switch').slideToggle('medium');
+        });
+
+        /* Style */
+        $("#cssSwitch .cssblue").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-blue.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssred").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-red.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssblue").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-blue.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssgreen").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-green.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssorange").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-orange.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .csspurple").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-purple.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .csspink").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-pink.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssdark-cyan").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-dark-cyan.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssdark-gray").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-dark-gray.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssbrown").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-brown.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+        $("#cssSwitch .cssyellow").click(function() { 
+            $("link.switchable1").attr("href","css/color/color-yellow.css");
+            $('body').hide().fadeIn(1250);
+            return false;
+        });
+
+    });
+
+    /* ========================== */
+    /* ::::::: Backstrech ::::::: */
+    /* ========================== */
+    // You may also attach Backstretch to a block-level element
+    $.backstretch(
+        [
+            "img/bg/16.jpg",
+            "img/bg/37.jpg",
+            "img/bg/59.jpg"
+        ],
+    
+        {
+            duration    :   4500,
+            fade        :   1500
+        }
+    );
+    </script>
+
+</body>
+
+<!-- Mirrored from demo.qawba.com/jewelry/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Dec 2017 08:09:02 GMT -->
+</html>
